@@ -1,23 +1,25 @@
 #include <stdio.h>
 
 int main() {
-	unsigned long long int fib[61];
-	for(int n = 0; n <= 60;n++){
-		if (n == 0) {
-			fib[0] = 0;
-		} else if (n == 1) {
-			fib[1] = 1;	
-		} else {
-			fib[n] = fib[n - 1] + fib[n - 2];
-		}
-	}
+int T;
+unsigned long long int N[61];
+int posicao;
+int i;
 
-	int d, v;
-	scanf("%d", &d);
-	for (int i = 0; i < d; i++) {
-			scanf("%d", &v);
-			printf("Fib(%d) = %lld\n", v, fib[v]);
-	}
+N[0] = 0;
+N[1] = 1;
+
+for(i = 2;i<61;i++){
+N[i] = N[i - 1] + N[i - 2];
+}
+
+scanf("%d", &T);
+
+for(i = 0;i<T;i++){
+scanf("%d", &posicao);
+printf("Fib(%d) = %lld\n",posicao,N[posicao]);
+}
+
 
 	return 0;
 }
