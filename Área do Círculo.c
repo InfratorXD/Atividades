@@ -16,3 +16,4 @@ printf("A=%.4lf\n", area);
 
  return 0;
 }
+//https://drive.google.com/drive/folders/1ljyxaEx9xVo0gxg9BZPv1h57ar_216Yo?usp=sharing
